@@ -69,57 +69,57 @@ const solutions = [
 const features = [
   {
     name: 'Satellite Valuation',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'Using Planet’s technology, we can verify carbon offsets more frequently and accurately than any other platform on the market.',
     icon: RssIcon,
   },
   {
     name: 'Continuous Monitoring',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'Unlink competitors, we monitor land on a daily basis, holding landowners accountable and ensuring businesses receive high fidelity carbon offset credits.',
     icon: RefreshIcon,
   },
   {
     name: 'Traceability',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'With access to high-resolution satellite imagery, businesses can see the land before they buy and know exactly where it is located.',
     icon: TrendingUpIcon,
   },
   {
     name: 'Scientific Accuracy',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'The current offset market relies on human capital and is not standardized. With the use of satellite data and our methodology, we provide accurate and consistent offset data.',
     icon: VariableIcon,
   },
   {
     name: 'Local Approach',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'We are the only exchange built with the goal of local-to-local matching. Businesses can now support the communities they directly affect by buying offsets from local landowners.',
     icon: MapIcon,
   },
   {
     name: 'No Minimum',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'While the current process only caters to large plots of land, we bundle smaller plots to allow landowners of all sizes to join the fight against climate change.',
     icon: ReplyIcon,
   },
   {
     name: 'Instant Onboarding',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'With no legal work and less people, we make joining the carbon offset market simpler than ever. In less than an hour, landowners can begin turning their land into income.',
     icon: ClockIcon,
   },
   {
     name: 'No Brokerage',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'With our platform, landowners and businesses can be connected instantly without the use of brokers.',
     icon: LibraryIcon,
   },
 ];
 const metrics = [
   {
-    id: 1, stat: '8K+', emphasis: 'Companies', rest: 'use laoreet amet lacus nibh integer quis.',
+    id: 1, stat: '$93MM', emphasis: 'in carbon credits', rest: 'were purchased in 2020 by companies.',
   },
   {
-    id: 2, stat: '25K+', emphasis: 'Countries around the globe', rest: 'lacus nibh integer quis.',
+    id: 2, stat: '$50MM', emphasis: 'Projected', rest: 'value of the carbon offset market by 2030.',
   },
   {
-    id: 3, stat: '98%', emphasis: 'Customer satisfaction', rest: 'laoreet amet lacus nibh integer quis.',
+    id: 3, stat: '1000', emphasis: 'Companies', rest: 'that have pledged to be net-zero by 2030.',
   },
   {
-    id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.',
+    id: 4, stat: '70%', emphasis: 'of consumers in the US', rest: 'believe it is important for brands and companies to be sustainable.',
   },
 ];
 const footerNavigation = {
@@ -256,12 +256,13 @@ export default function Example() {
                       as={Fragment}
                       enter="transition ease-out duration-200"
                       enterFrom="opacity-0 translate-y-1"
-                      enterTo="opacity-100 translate-y-0"
+                      enterTo="opacity-0 translate-y-0"
                       leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
+                      leaveFrom="opacity-0 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                      {/* remove hidden for real deployment */}
+                      <Popover.Panel className="hidden absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                             {solutions.map((item) => (
@@ -487,9 +488,7 @@ export default function Example() {
                       Turn your land into income
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                      porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
-                      Lectus viverra dui tellus ornare pharetra.
+                      CarbonCut enables your land, regardless of size, to support local businesses in reaching the net-zero emissions goals. Landowners can now be compensated for helping to prevent climate change. Start making money today by signing up below.
                     </p>
                     <div className="mt-6">
                       <a
@@ -505,8 +504,7 @@ export default function Example() {
                   <blockquote>
                     <div>
                       <p className="text-base text-gray-500">
-                        &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean
-                        curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
+                        &ldquo;CarbonCut’s mission is to create a world where everyone can be a part of the fight against climate change.&rdquo;
                       </p>
                     </div>
                     <footer className="mt-3">
@@ -519,7 +517,7 @@ export default function Example() {
                           />
                         </div>
                         <div className="text-base font-medium text-gray-700">
-                          Marcia Hill, Digital Marketing Manager
+                          Joshua Kim, Chief Executive Officer
                         </div>
                       </div>
                     </footer>
@@ -548,19 +546,17 @@ export default function Example() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Better understand your customers
+                      The time is now
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                      porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
-                      Lectus viverra dui tellus ornare pharetra.
+                      Consumers are now more sustainability-focused than ever. Making a difference does not have to be hard. We are looking for companies that are ready to take the next step towards becoming corporate activists. If you are ready to join the fight, click below.
                     </p>
                     <div className="mt-6">
                       <a
                         href="/#"
                         className="inline-flex bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-secondary-700 hover:to-primary-700"
                       >
-                        Get started
+                        Find offsets now
                       </a>
                     </div>
                   </div>
@@ -584,8 +580,7 @@ export default function Example() {
           <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white tracking-tight">Building a carbon exchange for the twenty-first century</h2>
             <p className="mt-4 max-w-3xl text-lg text-secondary-200">
-              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit
-              aliquam sit nisl euismod mattis in.
+              Complex challenges requires modern solutions. That is why we are using satellite technology to transform the way businesses and landowners help fight climate change.
             </p>
             <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
               {features.map((feature) => (
@@ -630,12 +625,10 @@ export default function Example() {
                 </span>
               </h2>
               <p className="mt-3 text-3xl font-extrabold text-white">
-                Get actionable data that will help grow your business
+                The carbon offset market is growing faster than ever
               </p>
               <p className="mt-5 text-lg text-gray-300">
-                Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare
-                feugiat viverra eleifend fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet
-                lacus nibh integer quis. Eu vulputate diam sit tellus quis at.
+                More and more companies and landowners across the world are working to help stop climate change.
               </p>
               <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                 {metrics.map((item) => (
