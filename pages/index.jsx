@@ -19,17 +19,11 @@ import { Popover, Transition } from '@headlessui/react';
 import {
   AnnotationIcon,
   ChatAlt2Icon,
-  ChatAltIcon,
-  DocumentReportIcon,
-  HeartIcon,
   InboxIcon,
   MenuIcon,
-  PencilAltIcon,
   QuestionMarkCircleIcon,
   ReplyIcon,
   SparklesIcon,
-  TrashIcon,
-  UsersIcon,
   XIcon,
   GlobeIcon,
   VariableIcon,
@@ -39,9 +33,9 @@ import {
   RefreshIcon,
   RssIcon,
   TrendingUpIcon,
-  CurrencyDollarIcon,
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
 const solutions = [
   {
@@ -223,9 +217,11 @@ export default function Example() {
         <Popover className="relative bg-white">
           <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="/#">
-                <span className="font-extrabold text-primary-600 text-3xl">CarbonCut</span>
-              </a>
+              <Link href="/#">
+                <a>
+                  <span className="font-extrabold text-primary-600 text-3xl">CarbonCut</span>
+                </a>
+              </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
               <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
@@ -288,26 +284,36 @@ export default function Example() {
                 )}
               </Popover>
 
-              <a href="/#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Pricing
-              </a>
-              <a href="/#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Partners
-              </a>
-              <a href="/#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Company
-              </a>
+              <Link href="/#">
+                <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  Pricing
+                </a>
+              </Link>
+              <Link href="/#">
+                <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  Partners
+                </a>
+              </Link>
+              <Link href="/#">
+                <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  Company
+                </a>
+
+              </Link>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="/#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                Sign in
-              </a>
-              <a
-                href="/#"
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-secondary-700 hover:to-primary-700"
-              >
-                Sign up
-              </a>
+              <Link href="/#">
+                <a className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                  Sign in
+                </a>
+              </Link>
+              <Link href="/#">
+                <a
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-secondary-700 hover:to-primary-700"
+                >
+                  Sign up
+                </a>
+              </Link>
             </div>
           </div>
 
@@ -359,28 +365,37 @@ export default function Example() {
                 </div>
                 <div className="py-6 px-5">
                   <div className="grid grid-cols-2 gap-4">
-                    <a href="/#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Pricing
-                    </a>
-                    <a href="/#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Partners
-                    </a>
-                    <a href="/#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Company
-                    </a>
+                    <Link href="/#">
+                      <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                        Pricing
+                      </a>
+                    </Link>
+                    <Link href="/#">
+                      <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                        Partners
+                      </a>
+                    </Link>
+                    <Link href="/#">
+                      <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                        Company
+                      </a>
+                    </Link>
                   </div>
                   <div className="mt-6">
-                    <a
-                      href="/#"
-                      className="w-full flex items-center justify-center bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-secondary-700 hover:to-primary-700"
-                    >
-                      Sign up
-                    </a>
+                    <Link href="/#">
+                      <a
+                        className="w-full flex items-center justify-center bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-secondary-700 hover:to-primary-700"
+                      >
+                        Sign up
+                      </a>
+                    </Link>
                     <p className="mt-6 text-center text-base font-medium text-gray-500">
                       Existing customer?
-                      <a href="/#" className="text-gray-900">
-                        Sign in
-                      </a>
+                      <Link href="/#">
+                        <a className="text-gray-900">
+                          Sign in
+                        </a>
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -406,26 +421,28 @@ export default function Example() {
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span className="block text-white">We're making net-zero</span>
+                  <span className="block text-white">We&apos;re making net-zero</span>
                   <span className="block text-primary-500">normal</span>
                 </h1>
                 <p className="mt-6 max-w-lg mx-auto text-center text-xl text-primary-100 sm:max-w-3xl">
-                  We're using bleeding-edge satelite carbon assessment to bring carbon offset creaton into the 21st century.
+                  We&apos;re using bleeding-edge satellite carbon assessment to bring carbon offset creation into the 21st century.
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                    <a
-                      href="/#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-700 bg-white hover:bg-primary-50 sm:px-8"
-                    >
-                      Get started
-                    </a>
-                    <a
-                      href="/#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
-                    >
-                      Live demo
-                    </a>
+                    <Link href="/#">
+                      <a
+                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-700 bg-white hover:bg-primary-50 sm:px-8"
+                      >
+                        Get started
+                      </a>
+                    </Link>
+                    <Link href="/#">
+                      <a
+                        className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                      >
+                        Live demo
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -491,12 +508,13 @@ export default function Example() {
                       CarbonCut enables your land, regardless of size, to support local businesses in reaching the net-zero emissions goals. Landowners can now be compensated for helping to prevent climate change. Start making money today by signing up below.
                     </p>
                     <div className="mt-6">
-                      <a
-                        href="/#"
-                        className="inline-flex bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-secondary-700 hover:to-primary-700"
-                      >
-                        Get started
-                      </a>
+                      <Link href="/#">
+                        <a
+                          className="inline-flex bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-secondary-700 hover:to-primary-700"
+                        >
+                          Get started
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -552,12 +570,13 @@ export default function Example() {
                       Consumers are now more sustainability-focused than ever. Making a difference does not have to be hard. We are looking for companies that are ready to take the next step towards becoming corporate activists. If you are ready to join the fight, click below.
                     </p>
                     <div className="mt-6">
-                      <a
-                        href="/#"
-                        className="inline-flex bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-secondary-700 hover:to-primary-700"
-                      >
-                        Find offsets now
-                      </a>
+                      <Link href="/#">
+                        <a
+                          className="inline-flex bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-secondary-700 hover:to-primary-700"
+                        >
+                          Find offsets now
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -656,18 +675,20 @@ export default function Example() {
               </span>
             </h2>
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-              <a
-                href="/#"
-                className="flex items-center justify-center bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-secondary-700 hover:to-primary-700"
-              >
-                Learn more
-              </a>
-              <a
-                href="/#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-800 bg-primary-50 hover:bg-primary-100"
-              >
-                Get started
-              </a>
+              <Link href="/#">
+                <a
+                  className="flex items-center justify-center bg-gradient-to-r from-secondary-600 to-primary-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-secondary-700 hover:to-primary-700"
+                >
+                  Learn more
+                </a>
+              </Link>
+              <Link href="/#">
+                <a
+                  className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-800 bg-primary-50 hover:bg-primary-100"
+                >
+                  Get started
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -680,7 +701,7 @@ export default function Example() {
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-                  <ul role="list" className="mt-4 space-y-4">
+                  <ul className="mt-4 space-y-4">
                     {footerNavigation.solutions.map((item) => (
                       <li key={item.name}>
                         <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
@@ -692,7 +713,7 @@ export default function Example() {
                 </div>
                 <div className="mt-12 md:mt-0">
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-                  <ul role="list" className="mt-4 space-y-4">
+                  <ul className="mt-4 space-y-4">
                     {footerNavigation.support.map((item) => (
                       <li key={item.name}>
                         <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
@@ -706,7 +727,7 @@ export default function Example() {
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                  <ul role="list" className="mt-4 space-y-4">
+                  <ul className="mt-4 space-y-4">
                     {footerNavigation.company.map((item) => (
                       <li key={item.name}>
                         <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
@@ -718,7 +739,7 @@ export default function Example() {
                 </div>
                 <div className="mt-12 md:mt-0">
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
-                  <ul role="list" className="mt-4 space-y-4">
+                  <ul className="mt-4 space-y-4">
                     {footerNavigation.legal.map((item) => (
                       <li key={item.name}>
                         <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
